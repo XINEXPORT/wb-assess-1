@@ -18,8 +18,10 @@ return tenArr;
 //   => ['banana', 'Bonobo]
 function bWords(words) {
   let arr = [];
-  for (const word of words){
-  if (word[0].toUpperCase() || words[0] === 'B');
+  for (let i = 0; i < words.length; i++) {
+    for (let t = 0; t<words[row].length; t+=1){
+      console.log(words[row][col]);
+    }
   }
    {
   return arr;

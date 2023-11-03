@@ -91,7 +91,16 @@ function stickyCase(string) {
 // Ex.:
 //   leetspeak('javascript');
 //   => 'j4v45cr1p7'
-function leetspeak(string) {}
+function leetspeak(string) {
+  let vowels = ['a', 'e', 'i', 'o','u', 'y'];
+
+  for (let i = 0; i < string.length; i++) {
+    if (vowels.includes(string[i])) {
+      string = string.replace(string[i], '['a','e','i','o','u','y']');
+    }
+  }
+  return string
+  }
 
 export {
   approximatelyEqual,
