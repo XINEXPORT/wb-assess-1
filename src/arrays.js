@@ -17,7 +17,13 @@ return tenArr;
 //   bWords(['banana', 'orange', 'apple', 'Bonobo', 'kiwi', 'pear']);
 //   => ['banana', 'Bonobo]
 function bWords(words) {
-  return words .filter(word => word.startsWith('b') || word.startsWith('B'));
+  let arr = [];
+  for (const word of words){
+  if (word[0].toUpperCase() || words[0] === 'B');
+  }
+   {
+  return arr;
+}
 }
 
 // Add all the elements from additionalItems to the end of originalArray.
@@ -101,7 +107,7 @@ function findIndex(items, value) {
 for (let i = 0; i <items.length; i++){
   let word = items[i];
   if (word === value){
-    firstArr.push(i);
+    firstArr.push([i]);
   }
 }
 }
@@ -111,7 +117,14 @@ for (let i = 0; i <items.length; i++){
 // Ex.:
 //   range(1, 5);
 //   => [1, 2, 3, 4, 5]
-function range(start, stop) {}
+function range(start, stop) {
+  let arr = [];
+for(let i = start;  i <= range.length-1; i++){
+arr.push(i);
+}
+return arr;
+}
+const result = range(1, 4);
 
 export {
   bWords,

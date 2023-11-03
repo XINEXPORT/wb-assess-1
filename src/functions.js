@@ -1,6 +1,9 @@
 // Return the quotient of x and y.
 // Ex.:
 //   divide(10, 2);
+
+import { everyOtherItem } from "./arrays";
+
 //   => 5
 function divide(x, y) {
   return x/y;
@@ -30,7 +33,7 @@ function approximatelyEqual(x, y) {
 //   fullName('John', 'Doe');
 //   => 'John Doe'
 function fullName(firstName, lastName) {
-  return firstName.toUpperCase() + ' ' + lastName.toUpperCase();
+  return firstName + ' ' + lastName;
 }
 
 fullName ('henry','lee')
@@ -41,20 +44,40 @@ fullName ('henry','lee')
 //   generateSentence('Kay', 'coffee', 'the local cafe');
 //   => 'Kay was drinking coffee at the local cafe.'
 function generateSentence(person, beverage, location) {
-  return `${person} was drinking ${beverage} at %{location}`;
+  return (`${person} was drinking ${beverage} at ${location}.`);
 }
 
 // Return the given string with all vowels replced with '*' characters.
 // Ex.:
 //   censorVowels('javascript');
 //   => 'j*v*scr*pt'
-function censorVowels(string) {}
+function censorVowels(string) {
+let vowels = ['a', 'e', 'i', 'o','u', 'y'];
+
+for (let i = 0; i < string.length; i++) {
+  if (vowels.includes(string[i])) {
+    string = string.replace(string[i], '*');
+  }
+}
+return string
+}
 
 // Return the given string in sticky case.
 // Ex.:
 //   stickyCase('hello world');
 //   => 'hElLo wOrLd'
-function stickyCase(string) {}
+
+function stickyCase(string) {
+  let stickyCase = '';
+  for (let i = 0; i < string.length; i++){
+    if (i % 2 == 0)  {
+      stickyCase = stickyCase.toLowerCase();
+    } else {
+      stickyCase = stickyCase.toUpperCase();
+  }
+}
+  return stickyCase;
+}
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this
