@@ -68,16 +68,20 @@ return string
 //   => 'hElLo wOrLd'
 
 function stickyCase(string) {
-  let stickyCase = '';
+  let stickyCase = ''
+
   for (let i = 0; i < string.length; i++){
+    let isEven = (i+1) % 2 === 0;
     if (i % 2 == 0)  {
-      stickyCase = stickyCase.toLowerCase();
+      stickyCase = stickyCase + string[i].toLowerCase()
     } else {
-      stickyCase = stickyCase.toUpperCase();
+      stickyCase = stickyCase + string[i].toUpperCase()
   }
 }
   return stickyCase;
 }
+
+stickyCase('string')
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this
@@ -91,16 +95,9 @@ function stickyCase(string) {
 // Ex.:
 //   leetspeak('javascript');
 //   => 'j4v45cr1p7'
-function leetspeak(string) {
-  let vowels = ['a', 'e', 'i', 'o','u', 'y'];
 
-  for (let i = 0; i < string.length; i++) {
-    if (vowels.includes(string[i])) {
-      string = string.replace(string[i], '['a','e','i','o','u','y']');
-    }
-  }
-  return string
-  }
+function leetspeak(string) {}
+
 
 export {
   approximatelyEqual,

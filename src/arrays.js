@@ -18,15 +18,15 @@ return tenArr;
 //   => ['banana', 'Bonobo]
 function bWords(words) {
   let arr = [];
-  for (let i = 0; i < words.length; i++) {
-    for (let t = 0; t<words[row].length; t+=1){
-      console.log(words[row][col]);
+  for (const word of words) {
+    if (word[0].toUpperCase() === 'B') 
+    arr.push (word);
     }
-  }
-   {
   return arr;
 }
-}
+
+bWords(['babe','Best','ate'])
+
 
 // Add all the elements from additionalItems to the end of originalArray.
 // Return the originalArray..
@@ -45,10 +45,17 @@ extend ([1,2,3,4], [6,7,8])
 //   => ['bbb', 'eee']
 function itemsWithLength(items, length) {
   let newArr = [];
-  for (let i=0; i < items.length; i++){
-    let bbb = newArr[i];
+  for (let i = 0; i < items.length; i++){
+    let bbb = items[i];
+
+    if (bbb.length === length){
+      newArr.push(bbb);
+    }
 }
+return newArr
 }
+
+itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
@@ -68,22 +75,21 @@ function everyOtherItem(items) {
 // Ex.:
 //   findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
 //   => [1, 4]
+// findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
+
 function findWordsStartingWith(words, letter) {
   let indexArr = [];
 for(let i =0; i <words.length; i++){
-    let word = listWords [i];
-    if (word.startsWith(letter)){
+    let word = words[i];
+    if (word[0] === letter){
       indexArr.push(i);
     }
 }
 return indexArr;
 }
-const listWords = ['hi','bye', 'hello'];
-const letter = 'h';
-const resultIndex = findWordsStartingWith(listWords, letter)
 
-console.log(resultIndex);
-
+findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
+ 
 // Return the `n` smallest values in the array in descending order (largest
 // numbers first). Assume that `n` will always be less than the length of the
 // array.
